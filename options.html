@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Multi-Profile Login — Cài đặt</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 480px; margin: 24px auto; padding: 0 12px; }
+  li { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #eee; list-style: none; }
+  ul { padding: 0; margin: 0; }
+  .warn { background: #fff6e5; border: 1px solid #f0d999; padding: 10px; border-radius: 6px; font-size: 13px; margin-bottom: 16px; line-height: 1.5; }
+  .row { display: flex; gap: 6px; margin-top: 12px; }
+  .row input { flex: 1; }
+  .status { min-height: 18px; font-size: 12.5px; margin-top: 8px; line-height: 1.4; }
+  .status.info { color: #555; }
+  .status.ok { color: #0a7a2f; }
+  .status.error { color: #c02626; }
+</style>
+</head>
+<body>
+  <h2>Domain đang quản lý</h2>
+  <div class="warn">
+    Chỉ thêm domain đăng nhập bằng session-cookie. Với site dùng token trong
+    localStorage/IndexedDB, các tab trong cùng một profile Chrome vẫn sẽ tự động dùng chung
+    tài khoản dù extension có tráo cookie — xem README.md để biết cách kiểm tra trước.
+  </div>
+  <ul id="list"></ul>
+  <div class="row">
+    <input id="domainInput" placeholder="vd: example.com" />
+    <button id="addBtn">Thêm</button>
+  </div>
+  <p id="status" class="status"></p>
+  <script src="options.js" type="module"></script>
+</body>
+</html>

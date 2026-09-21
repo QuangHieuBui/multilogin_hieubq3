@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<title>Multi-Profile Login</title>
+<style>
+  body { font-family: system-ui, sans-serif; width: 320px; padding: 12px; margin: 0; }
+  h1 { font-size: 14px; margin: 0 0 10px; }
+  .domain { font-weight: 600; margin-bottom: 8px; word-break: break-all; }
+  .profile-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eee; font-size: 13px; }
+  .profile-row button { margin-left: 6px; font-size: 12px; }
+  .active { color: #0a7a2f; font-weight: 600; }
+  .new-profile { display: flex; gap: 6px; margin-top: 10px; }
+  .new-profile input { flex: 1; min-width: 0; }
+  .muted { color: #666; font-size: 12px; }
+  .warn { color: #8a5300; font-size: 11px; margin-top: 10px; line-height: 1.4; }
+  .primary-btn {
+    width: 100%; padding: 8px 10px; font-size: 13px; font-weight: 600;
+    background: #1a73e8; color: #fff; border: none; border-radius: 6px; cursor: pointer;
+    margin-bottom: 12px;
+  }
+  .primary-btn:hover { background: #1558b0; }
+  hr { border: none; border-top: 1px solid #eee; margin: 0 0 12px; }
+</style>
+</head>
+<body>
+  <h1>Multi-Profile Login</h1>
+  <button id="newSessionBtn" class="primary-btn">➕ Mở phiên mới (tab mới, tự nhận diện site)</button>
+  <hr />
+  <div id="content">Đang tải…</div>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

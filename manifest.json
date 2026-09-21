@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Multi-Profile Login (site dùng session-cookie)",
+  "version": "0.1.0",
+  "description": "Mở nhiều tài khoản của cùng 1 website trong các tab riêng biệt mà không cần đăng xuất. Chỉ hiệu quả với site đăng nhập bằng session-cookie (xem README).",
+  "permissions": [
+    "declarativeNetRequestWithHostAccess",
+    "webRequest",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Multi-Profile Login",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html"
+}
